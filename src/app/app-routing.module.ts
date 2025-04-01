@@ -14,7 +14,7 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
     initialNavigation: 'enabledBlocking',
-    preloadingStrategy: PreloadAllModules
+    preloadingStrategy: PreloadAllModules //preload modules for more performance
   })],
   exports: [RouterModule]
 })
