@@ -17,6 +17,7 @@ import { CustomersComponent } from './components/customers/customers.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ImageComponent } from './components/image/image.component';
+import { IntersectionObserverDirective } from './shared/directives/intersection-observer.directive';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ImageComponent } from './components/image/image.component';
     CustomersComponent,
     ContactComponent,
     HomeComponent,
-    ImageComponent
+    ImageComponent,
+    IntersectionObserverDirective
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -41,6 +43,6 @@ import { ImageComponent } from './components/image/image.component';
     SwiperModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

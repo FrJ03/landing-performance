@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { IntersectionStatus } from 'src/app/shared/directives/from-intersection-observer';
 import { SwiperOptions } from 'swiper';
 import { SwiperComponent } from 'swiper/angular';
 
@@ -18,6 +19,8 @@ interface Customer {
 export class CustomersComponent {
   faAngleLeft = faAngleLeft;
   faAngleRight = faAngleRight;
+
+  status: IntersectionStatus = IntersectionStatus.NotVisible
 
   config: SwiperOptions = {
     slidesPerView: 1,
@@ -67,5 +70,9 @@ export class CustomersComponent {
 
       return differenceInYears === 1 ? `1 year ago` : `${differenceInYears} years ago`
     }
+  }
+
+  onVisibilityChanged(status: IntersectionStatus){
+    this.status = status
   }
 }
