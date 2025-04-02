@@ -15,7 +15,10 @@
               </p>
             </div>
             <div class="slide__image">
-              <img loading="lazy" alt="Customer image" [src]="customer.image" />
+              <app-image
+                alt="Customer image"
+                [path]="customer.image"
+              ></app-image>
             </div>
           </div>
         </ng-template>
