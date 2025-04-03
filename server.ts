@@ -7,6 +7,7 @@ import {existsSync} from 'fs';
 import {join} from 'path';
 
 import {AppServerModule} from './src/main.server';
+import * as compression from 'compression';
 
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
@@ -18,6 +19,8 @@ export function app(): express.Express {
   server.engine('html', ngExpressEngine({
     bootstrap: AppServerModule,
   }));
+
+  server.use(compression())
 
   server.set('view engine', 'html');
   server.set('views', distFolder);
