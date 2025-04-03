@@ -18,7 +18,7 @@
   &:after {
     position: absolute;
     content: "";
-    background-image: url(/assets/images/apple.png);
+    background-image: url(/assets/images/apple.webp);
     right: 0.5rem;
     top: 20%;
     display: block;
@@ -76,6 +76,7 @@
     }
     .cta {
       margin: 1.4rem auto 0 auto;
+      background-image: url(/assets/images/apple-small.webp);
     }
   }
 }

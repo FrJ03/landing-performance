@@ -1,7 +1,7 @@
 @import "vars";
 
 .section--contact {
-  background: url(/assets/images/contact-bg.png) repeat;
+  background: url(/assets/images/contact-bg.webp) repeat;
   padding: 8rem 3rem;
   margin: 0;
   max-width: none;
@@ -51,6 +51,7 @@
     margin-top: 1rem;
   }
   .section--contact {
+    background: url(/assets/images/contact-bg-small.webp) repeat;
     padding: 5rem 1rem;
   }
   .form-group {
